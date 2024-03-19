@@ -7,7 +7,7 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: { default: 'nx run web:start' },
-      ciWebServerCommand: 'nx run web:serve-static',
+      ciWebServerCommand: 'nx run web:start --prod',
     }),
     baseUrl: 'http://localhost:3000',
   },

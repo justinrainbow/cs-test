@@ -1,6 +1,5 @@
-import { getUser, User } from '@cs-test/db';
-import { Avatar, AvatarGroup, Card, Divider } from '@nextui-org/react';
-import UserProfile from 'apps/web/components/user-profile/user-profile';
+import { getUser } from '@cs-test/db';
+import UserProfile from '../../../components/user-profile/user-profile';
 import { SWRProvider } from '../../swr-provider';
 
 /* eslint-disable-next-line */

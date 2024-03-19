@@ -1,5 +1,6 @@
 'use client';
 
+import type { User as UserDoc } from '@cs-test/db';
 import { User } from '@nextui-org/react';
 import Link from 'next/link';
 import useSWR from 'swr';
@@ -11,7 +12,10 @@ export interface UsersListProps {
   delay?: number;
 }
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) =>
+  fetch(url).then(
+    (res): Promise<{ data: UserDoc[]; total: number }> => res.json()
+  );
 
 const useUsers = ({ page, limit, delay }: Required<UsersListProps>) => {
   const { data, error } = useSWR(

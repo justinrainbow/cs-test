@@ -1,15 +1,14 @@
-import AppLogo from '../app-logo/app-logo';
 import {
-  Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
 } from '@nextui-org/react';
-import NextLink from 'next/link';
 import { link as linkStyles } from '@nextui-org/theme';
 import clsx from 'clsx';
+import NextLink from 'next/link';
 import { siteConfig } from '../../config/site';
+import AppLogo from '../app-logo/app-logo';
 
 export default function AppHeader() {
   return (

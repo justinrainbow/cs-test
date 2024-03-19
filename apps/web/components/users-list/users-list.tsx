@@ -28,7 +28,6 @@ const useUsers = ({ page, limit, delay }: Required<UsersListProps>) => {
 
 export function UsersListLoading() {
   return <div>Loading users...</div>;
-
 }
 
 export function UsersListError() {

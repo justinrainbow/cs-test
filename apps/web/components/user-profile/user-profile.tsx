@@ -9,7 +9,7 @@ export interface UserProfileProps {
 }
 
 const fetcher = (url: string) =>
-  fetch(url).then((res): Promise<{data:UserWithFriends}> => res.json());
+  fetch(url).then((res): Promise<{ data: UserWithFriends }> => res.json());
 
 function useUser(userId: number) {
   return useSWR(`/api/users/${userId}`, fetcher);
@@ -18,7 +18,7 @@ function useUser(userId: number) {
 export default function UserProfile({ userId }: UserProfileProps) {
   const { data, error } = useUser(userId);
 
-  if (!data) {
+  if (!data || error) {
     return <h1>User not found</h1>;
   }
 
